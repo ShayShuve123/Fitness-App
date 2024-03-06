@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentHome12">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.fitnessapp.Fragments.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/fragmentSignUp"
+        android:name="com.example.fitnessapp.Fragments.FragmentSignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_fragmentSignUp_to_fragmentHome12"
+            app:destination="@id/fragmentHome12" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome12"
+        android:name="com.example.fitnessapp.Fragments.FragmentHome1"
+        android:label="fragment_home1"
+        tools:layout="@layout/fragment_home1" >
+        <action
+            android:id="@+id/action_fragmentHome12_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_fragmentHome12_to_fragmentSignUp"
+            app:destination="@id/fragmentSignUp" />
+    </fragment>
+</navigation>
