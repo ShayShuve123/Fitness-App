@@ -76,6 +76,16 @@ public class FragmentHome1 extends Fragment {
             }
         });
 
+        //Pass from main to Login fragment
+        Button btnLogin1= view.findViewById(R.id.btnLogin1);  //was change
+        btnLogin1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.action_fragmentHome12_to_fragmentLogin);
+
+            }
+        });
+
         return view;
     }
 }
