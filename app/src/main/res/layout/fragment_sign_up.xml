@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
+            android:hint="📧Email                     "
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -54,8 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Password"
+            android:hint="🗝️Password"
             android:inputType="textPassword" />
+
 
         <EditText
             android:id="@+id/editTextPhone"
@@ -63,9 +64,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Phone"
+            android:hint="📱Phone"
             android:inputType="phone" />
-
 
         <EditText
             android:id="@+id/editTextHeight"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Height"
+            android:hint="Height in CM"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Weight"
+            android:hint="Weight in KG"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -104,13 +104,15 @@
                 android:id="@+id/radioButtonFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:layout_weight="1"
+                android:text="🤵🏼‍♀️Female" />
 
             <RadioButton
                 android:id="@+id/radioButtonMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Male" />
+                android:layout_weight="1"
+                android:text="🤵🏼‍♂️Male" />
 
         </RadioGroup>
 
@@ -119,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Sign up" />
+            android:text="Sign up📋" />
 
     </LinearLayout>
 

@@ -9,7 +9,14 @@
         android:id="@+id/fragmentLogin"
         android:name="com.example.fitnessapp.Fragments.FragmentLogin"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHomeApp"
+            app:destination="@id/fragmentHomeApp" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHomeApp2"
+            app:destination="@id/fragmentHomeApp" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentSignUp"
         android:name="com.example.fitnessapp.Fragments.FragmentSignUp"
@@ -31,4 +38,9 @@
             android:id="@+id/action_fragmentHome12_to_fragmentSignUp"
             app:destination="@id/fragmentSignUp" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentHomeApp"
+        android:name="com.example.fitnessapp.Fragments.FragmentHomeApp"
+        android:label="fragment_home_app"
+        tools:layout="@layout/fragment_home_app" />
 </navigation>
