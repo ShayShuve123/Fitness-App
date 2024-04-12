@@ -1,15 +1,28 @@
 package com.example.fitnessapp.classes;
 
+import java.util.ArrayList;
+
 public class UserClass {
     private String firstName;
     private String lastName;
     private String userName;
-    //private String password;
     private String phone;
     private double height;
     private double weight;
     private int age;
     private String gender;
+
+    private String exerciseLevel;
+
+    private String workoutsPerWeek;//ANAT
+
+    ArrayList<UserEquipment>availableEquipment;//all the equipment the user have
+
+    private String myPoints;
+
+    //private String calories;
+
+
 
     // Constructors
     public UserClass() {
@@ -17,7 +30,7 @@ public class UserClass {
     }
 
     public UserClass(String firstName, String lastName, String userName, String phone,
-                     double height, double weight, int age, String gender) {
+                     double height, double weight, int age, String gender,String exerciseLevel, String workoutsPerWeek,String myPoints) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -27,6 +40,10 @@ public class UserClass {
         this.weight = weight;
         this.age = age;
         this.gender = gender;
+        this.exerciseLevel = exerciseLevel;
+        this.workoutsPerWeek = workoutsPerWeek;
+        this.availableEquipment=new ArrayList<>();
+        this.myPoints = "0";
     }
 
     // Getters and setters
@@ -93,5 +110,29 @@ public class UserClass {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getExerciseLevel() {
+        return exerciseLevel;
+    }
+
+    public void setExerciseLevel(String fitnessLevel) {
+        this.exerciseLevel = fitnessLevel;
+    }
+
+    public String getWorkoutsPerWeek() {
+        return workoutsPerWeek;
+    }
+
+    public void setWorkoutsPerWeek(String workoutsPerWeek) {
+        this.workoutsPerWeek = workoutsPerWeek;
+    }
+
+    public String getMyPoints() {
+        return myPoints;
+    }
+
+    public void setMyPoints(String myPoints) {
+        this.myPoints = myPoints;
     }
 }

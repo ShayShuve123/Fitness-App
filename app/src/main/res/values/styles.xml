@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define the ButtonNoBackground style -->
+    <style name="ButtonNoBackground" parent="Widget.AppCompat.Button">
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">@font/font</item> //anet
+
+    </style>
+</resources>

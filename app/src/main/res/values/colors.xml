@@ -2,5 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lavender">#8692f7</color>
+    <color name="lavender">#7C3B62</color>
+    <color name="pink1">#FFE4D6</color>
+    <color name="pink2">#FACBEA</color>
+    <color name="pink3">#D988B9</color> //btn
+    <color name="pink4">#B0578D</color>
+    <color name="pink5">#F7EBEB</color>
+
+
 </resources>

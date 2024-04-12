@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">FitnessApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="channel_name">workout notification</string>
+
+    <!-- Channel description -->
+    <string name="channel_description">Do not forget to workout</string>
+
+    <string name="about_application">About the app:\n\n
+      - The application allows you to train at home from the variety of training available, depending on the time, level and available equipment.\n
+      - When registering, you must fill in details and the equipment available to you. The possible trainings that will appear to you are trainings that correspond to all the information you entered during the registration phase.\n
+      - You can choose to create a workout reminder alert (one alert at a time).\n
+      - The app supports changing and updating your available equipment and profile.\n
+      - You can use calculators for BMI, BMR, weight and heart rate calculations.\n
+      - Track the points you have earned in training, and earn points for each training you complete.\n
+      - When you reach 500 points, the points will be reset and you will start accumulating points again.\n
+      - If you want to change equipment available to you, you will need to login again.\n
+- The possible trainings that will be presented to you are according to your level. (You can change the level in the profile).\n\n
+      App developers:\n
+      Xi again\n
+        Anat Shulman</string>
 </resources>

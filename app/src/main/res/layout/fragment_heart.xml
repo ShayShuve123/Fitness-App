@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".Fragments.FragmentHeart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Calculator"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Necessary fields -->
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Age"
+            android:padding="16dp"
+            android:layout_margin="16dp" />
+
+        <EditText
+            android:id="@+id/editTextRestingHR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Resting Heart Rate"
+            android:padding="16dp"
+            android:layout_margin="16dp" />
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:background="@drawable/rounded_button_background"
+
+            android:layout_margin="16dp" />
+
+        <!-- Result TextView -->
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: Enter your age and resting heart rate to calculate your heart health."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Home Button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Home Button -->
+            <Button
+                android:id="@+id/btnHome5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_alignParentBottom="true"
+                android:padding="5dp"
+                android:drawableTop="@drawable/btn_home1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

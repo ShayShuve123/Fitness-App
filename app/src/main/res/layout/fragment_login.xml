@@ -4,17 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fitness_app_background"
     tools:context=".Fragments.FragmentLogin">
 
     <TextView
-        android:id="@+id/textViewSignUp"
+        android:id="@+id/textViewV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:layout_weight="11"
         android:gravity="center"
+        android:textStyle="bold"
+
         android:padding="10dp"
-        android:text="Log in" />
+        android:text="Log in"
+        android:textSize="18sp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,6 +39,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Email:"
+            android:textStyle="bold"
+
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -44,6 +51,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Password:"
+            android:textStyle="bold"
+
             android:inputType="textPassword" />
 
         <Button
@@ -52,6 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:gravity="center"
+            android:background="@drawable/rounded_button_background"
+
             android:text="Log in" />
     </LinearLayout>
 </LinearLayout>

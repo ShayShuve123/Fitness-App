@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background3"
+    tools:context=".Fragments.FragmentCalculators">
+
+
+    <TextView
+        android:id="@+id/textViewTitleCalculators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculators"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- Calculator Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!-- BMI Calculator Button -->
+        <Button
+            android:id="@+id/btnBMI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_background"
+
+            android:padding="30dp"
+            android:text="BMI Calculator"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <!-- Heart Calculator Button -->
+        <Button
+            android:id="@+id/btnHeart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_background"
+
+            android:padding="30dp"
+            android:text="Heart Calculator"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Calculator Buttons (Second Row) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!-- Weight Calculator Button -->
+        <Button
+            android:id="@+id/btnWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_background"
+
+            android:padding="30dp"
+            android:text="Weight Calculator"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <!-- BMR/TDEE Calculator Button -->
+        <Button
+            android:id="@+id/btnBMR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_background"
+            android:padding="30dp"
+            android:text="BMR Calculator"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Home Button -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_button_background"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:drawableTop="@drawable/btn_home1"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

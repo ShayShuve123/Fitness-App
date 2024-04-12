@@ -11,11 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_fragmentLogin_to_fragmentHomeApp"
-            app:destination="@id/fragmentHomeApp" />
-        <action
-            android:id="@+id/action_fragmentLogin_to_fragmentHomeApp2"
-            app:destination="@id/fragmentHomeApp" />
+            android:id="@+id/action_fragmentLogin_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSignUp"
@@ -23,8 +20,8 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/action_fragmentSignUp_to_fragmentHome12"
-            app:destination="@id/fragmentHome12" />
+            android:id="@+id/action_fragmentSignUp_to_fragmentSingUp2"
+            app:destination="@id/fragmentSingUp2" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHome12"
@@ -39,8 +36,194 @@
             app:destination="@id/fragmentSignUp" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentHomeApp"
-        android:name="com.example.fitnessapp.Fragments.FragmentHomeApp"
-        android:label="fragment_home_app"
-        tools:layout="@layout/fragment_home_app" />
+        android:id="@+id/fragmentSingUp2"
+        android:name="com.example.fitnessapp.Fragments.FragmentSingUp2"
+        android:label="fragment_sing_up2"
+        tools:layout="@layout/fragment_sing_up2" >
+        <action
+            android:id="@+id/action_fragmentSingUp2_to_fragmentHome12"
+            app:destination="@id/fragmentHome12" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNotification"
+        android:name="com.example.fitnessapp.Fragments.FragmentNotification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_fragmentNotification_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome22"
+        android:name="com.example.fitnessapp.Fragments.FragmentHome2"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentHome12"
+            app:destination="@id/fragmentHome12" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentNotification"
+            app:destination="@id/fragmentNotification" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentNotification2"
+            app:destination="@id/fragmentNotification" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentCalculators3"
+            app:destination="@id/fragmentCalculators3" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentTraining"
+            app:destination="@id/fragmentTraining" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentNotification3"
+            app:destination="@id/fragmentNotification" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentAbout"
+            app:destination="@id/fragmentAbout" />
+        <action
+            android:id="@+id/action_fragmentHome22_to_fragmentCalendar2"
+            app:destination="@id/fragmentCalendar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCalculators3"
+        android:name="com.example.fitnessapp.Fragments.FragmentCalculators"
+        android:label="fragment_calculators"
+        tools:layout="@layout/fragment_calculators" >
+        <action
+            android:id="@+id/action_fragmentCalculators3_to_fragmentBMI2"
+            app:destination="@id/fragmentBMI2" />
+        <action
+            android:id="@+id/action_fragmentCalculators3_to_fragmentHeart2"
+            app:destination="@id/fragmentHeart2" />
+        <action
+            android:id="@+id/action_fragmentCalculators3_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+        <action
+            android:id="@+id/action_fragmentCalculators3_to_fragmentWeight"
+            app:destination="@id/fragmentWeight" />
+        <action
+            android:id="@+id/action_fragmentCalculators3_to_fragmentBMR"
+            app:destination="@id/fragmentBMR" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBMI2"
+        android:name="com.example.fitnessapp.Fragments.FragmentBMI"
+        android:label="fragment_b_m_i"
+        tools:layout="@layout/fragment_b_m_i" >
+        <action
+            android:id="@+id/action_fragmentBMI2_to_fragmentCalculators3"
+            app:destination="@id/fragmentCalculators3" />
+        <action
+            android:id="@+id/action_fragmentBMI2_to_fragmentCalculators32"
+            app:destination="@id/fragmentCalculators3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHeart2"
+        android:name="com.example.fitnessapp.Fragments.FragmentHeart"
+        android:label="fragment_heart"
+        tools:layout="@layout/fragment_heart" >
+        <action
+            android:id="@+id/action_fragmentHeart2_to_fragmentCalculators3"
+            app:destination="@id/fragmentCalculators3" />
+        <action
+            android:id="@+id/action_fragmentHeart2_to_fragmentCalculators32"
+            app:destination="@id/fragmentCalculators3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWeight"
+        android:name="com.example.fitnessapp.Fragments.FragmentWeight"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" >
+        <action
+            android:id="@+id/action_fragmentWeight_to_fragmentCalculators3"
+            app:destination="@id/fragmentCalculators3" />
+        <action
+            android:id="@+id/action_fragmentWeight_to_fragmentCalculators32"
+            app:destination="@id/fragmentCalculators3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBMR"
+        android:name="com.example.fitnessapp.Fragments.FragmentBMR"
+        android:label="fragment_b_m_r"
+        tools:layout="@layout/fragment_b_m_r" >
+        <action
+            android:id="@+id/action_fragmentBMR_to_fragmentCalculators3"
+            app:destination="@id/fragmentCalculators3" />
+        <action
+            android:id="@+id/action_fragmentBMR_to_fragmentCalculators32"
+            app:destination="@id/fragmentCalculators3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.fitnessapp.Fragments.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTraining"
+        android:name="com.example.fitnessapp.Fragments.FragmentTraining"
+        android:label="fragment_training"
+        tools:layout="@layout/fragment_training" >
+        <action
+            android:id="@+id/action_fragmentTraining_to_fragmentVideo"
+            app:destination="@id/fragmentVideo" />
+        <action
+            android:id="@+id/action_fragmentTraining_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.example.fitnessapp.Fragments.FragmentSettings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentProfileEdit"
+            app:destination="@id/fragmentProfileEdit" />
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentSingUp2"
+            app:destination="@id/fragmentSingUp2" />
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfileEdit"
+        android:name="com.example.fitnessapp.Fragments.FragmentProfileEdit"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_fragmentProfileEdit_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVideo"
+        android:name="com.example.fitnessapp.Fragments.FragmentVideo"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/fragmentAbout"
+        android:name="com.example.fitnessapp.Fragments.FragmentAbout"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_fragmentAbout_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCalendar2"
+        android:name="com.example.fitnessapp.Fragments.FragmentCalendar"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_fragmentCalendar2_to_fragmentHome22"
+            app:destination="@id/fragmentHome22" />
+    </fragment>
 </navigation>

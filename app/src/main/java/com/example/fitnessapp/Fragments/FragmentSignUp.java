@@ -1,6 +1,7 @@
 package com.example.fitnessapp.Fragments;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.classes.UserClass;
@@ -31,9 +33,16 @@ public class FragmentSignUp extends Fragment {
     private View view;
     private EditText editTextFirstName, editTextLastName, editTextEmail, editTextPassword,
             editTextPhone, editTextHeight, editTextWeight, editTextAge;
-    private RadioGroup radioGroupGender;
+    private RadioGroup radioGroupGender,radioGroupExerciseLevel, radioGroupWorkoutsPerWeek;
+
     private Button buttonSignUp;
     private FirebaseAuth mAuth;
+
+    int selectedGenderId,selectedExerciseLevel,selectedWorkoutsPerWeek;
+
+    private String userId;
+
+
 
     @Nullable
     @Override
@@ -51,6 +60,8 @@ public class FragmentSignUp extends Fragment {
         editTextWeight = view.findViewById(R.id.editTextWeight);
         editTextAge = view.findViewById(R.id.editTextAge);
         radioGroupGender = view.findViewById(R.id.radioGroupGender);
+        radioGroupExerciseLevel = view.findViewById(R.id.radioGroupExerciseLevel);
+        radioGroupWorkoutsPerWeek = view.findViewById(R.id.radioGroupWorkoutsPerWeek);
         buttonSignUp = view.findViewById(R.id.btnSignUp);
 
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
@@ -67,16 +78,29 @@ public class FragmentSignUp extends Fragment {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
+        // Validate user input
+        if (!validateInput()) {
+            return; // Return if input is not valid
+        }
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            String userId = user.getUid();
+                            //assert user != null;
+                            userId = user.getUid();// Use the UID directly
                             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users").child(userId);
-                            createUser(databaseReference);
-                            Toast.makeText(getContext(), "Register success.", Toast.LENGTH_SHORT).show();
+                            createUser(databaseReference, userId);
+                            Toast.makeText(getContext(), "Register Succeeded.", Toast.LENGTH_SHORT).show();
+                            // If registration is successful, navigate to another fragment
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Navigation.findNavController(view).navigate(R.id.action_fragmentSignUp_to_fragmentSingUp2);
+                                }
+                            }, 1000);
                         } else {
                             Toast.makeText(getContext(), "Register failed.", Toast.LENGTH_SHORT).show();
                         }
@@ -84,7 +108,7 @@ public class FragmentSignUp extends Fragment {
                 });
     }
 
-    private void createUser(DatabaseReference databaseReference) {
+    private boolean validateInput() {
         String firstName = editTextFirstName.getText().toString().trim();
         String lastName = editTextLastName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim().toLowerCase();
@@ -94,39 +118,74 @@ public class FragmentSignUp extends Fragment {
         String weightStr = editTextWeight.getText().toString().trim();
         String ageStr = editTextAge.getText().toString().trim();
 
+        // Perform validation checks
         if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || password.isEmpty() ||
                 phone.isEmpty() || heightStr.isEmpty() || weightStr.isEmpty() || ageStr.isEmpty()) {
             Toast.makeText(getActivity(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
 
         if (phone.length() != 10) {
             Toast.makeText(getActivity(), "Phone number must be 10 digits", Toast.LENGTH_SHORT).show();
-            return;
+            return false;
         }
+
+        selectedGenderId = radioGroupGender.getCheckedRadioButtonId();
+        if (selectedGenderId == -1) {
+            Toast.makeText(getActivity(), "Please select a gender", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        selectedExerciseLevel = radioGroupExerciseLevel.getCheckedRadioButtonId();
+        if (selectedExerciseLevel == -1) {
+            Toast.makeText(getActivity(), "Please select your exercise level", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        selectedWorkoutsPerWeek = radioGroupWorkoutsPerWeek.getCheckedRadioButtonId();
+        if (selectedWorkoutsPerWeek == -1) {
+            Toast.makeText(getActivity(), "Please select number of workouts", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        // Additional validation checks can be added here
+
+        return true; // Input is valid
+    }
+
+    private void createUser(DatabaseReference databaseReference, String userId) {
+        //confer that not need to dealer aging
+        String firstName = editTextFirstName.getText().toString().trim();
+        String lastName = editTextLastName.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim().toLowerCase();
+        String phone = editTextPhone.getText().toString().trim();
+        String heightStr = editTextHeight.getText().toString().trim();
+        String weightStr = editTextWeight.getText().toString().trim();
+        String ageStr = editTextAge.getText().toString().trim();
 
         double height = Double.parseDouble(heightStr);
         double weight = Double.parseDouble(weightStr);
         int age = Integer.parseInt(ageStr);
 
-        int selectedGenderId = radioGroupGender.getCheckedRadioButtonId();
-        if (selectedGenderId == -1) {
-            Toast.makeText(getActivity(), "Please select a gender", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         RadioButton selectedGenderRadioButton = view.findViewById(selectedGenderId);
         String gender = selectedGenderRadioButton.getText().toString();
 
-        String userId = databaseReference.push().getKey();
-        UserClass user = new UserClass(firstName, lastName, email, phone, height, weight, age, gender);
+        RadioButton selectedExerciseLevelRadioButton = view.findViewById(selectedExerciseLevel);
+        String exerciseLevel = selectedExerciseLevelRadioButton.getText().toString();
 
+        RadioButton selectedWorkoutsPerWeekRadioButton = view.findViewById(selectedWorkoutsPerWeek);
+        String workoutsPerWeek = selectedWorkoutsPerWeekRadioButton.getText().toString();
+
+        String myPoints="0";
+
+        UserClass user = new UserClass(firstName, lastName, email, phone, height, weight, age, gender,exerciseLevel,workoutsPerWeek,myPoints);
+        //check what this do
         if (userId != null) {
-            databaseReference.child(userId).setValue(user)
+            databaseReference.setValue(user)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(getActivity(), "User created successfully", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getActivity(), "User created successfully", Toast.LENGTH_SHORT).show();//just for us
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -140,3 +199,8 @@ public class FragmentSignUp extends Fragment {
         }
     }
 }
+
+
+
+
+

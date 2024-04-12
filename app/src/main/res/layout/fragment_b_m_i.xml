@@ -1,0 +1,96 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".Fragments.FragmentBMI">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Title: BMI Calculator -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI Calculator"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- User Input Fields -->
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Weight (kg)"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:layout_margin="16dp" />
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Height (cm)"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:layout_margin="16dp" />
+
+        <!-- Calculator Button -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:background="@drawable/rounded_button_background"
+
+            android:textSize="18sp"
+            android:layout_margin="16dp" />
+
+        <!-- Result TextView -->
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+
+        <!-- Description/Introduction -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This BMI calculator helps you to calculate your Body Mass Index (BMI). BMI is a measure of body fat based on height and weight that applies to adult men and women."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <!-- Home Button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Home Button -->
+            <Button
+                android:id="@+id/btnHome7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_alignParentBottom="true"
+                android:padding="5dp"
+                android:drawableTop="@drawable/btn_home1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

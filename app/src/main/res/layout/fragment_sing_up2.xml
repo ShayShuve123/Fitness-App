@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fitness_app_background"
+    tools:context=".Fragments.FragmentSingUp2">
+
+    <!-- Place other views you might have here -->
+
+    <!-- RecyclerView -->
+
+    <TextView
+        android:id="@+id/textViewV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.001"
+        android:gravity="center"
+        android:text="Choose your equipment"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/custom_scrollbar_vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+    <Button
+        android:id="@+id/btnfinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.001"
+        android:background="@drawable/rounded_button_background"
+        android:text="finish registration" />
+
+</LinearLayout>

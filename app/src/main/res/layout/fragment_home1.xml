@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fitness_app_background"
     tools:context=".Fragments.FragmentHome1">
 
     <TextView
@@ -12,22 +13,37 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:gravity="center"
-        android:text="Welcome to my app" />
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Ready to start? " />
 
     <Button
         android:id="@+id/btnLogin1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="60dp"
+
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="0.2"
+        android:background="@drawable/rounded_button_background"
         android:text="Log in👩🏼‍💻" />
+
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="100dp"
         android:layout_weight="0.2"
+        android:background="@drawable/rounded_button_background"
         android:text="Register📋" />
 
 </LinearLayout>
