@@ -9,10 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
-
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-
 import com.example.fitnessapp.R;
 import com.example.fitnessapp.activitys.MainActivity;
 
