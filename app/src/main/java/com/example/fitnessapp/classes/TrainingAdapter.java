@@ -10,11 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.fitnessapp.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,10 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.List;
-
-
 
 public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHolder> {
 
@@ -71,9 +66,6 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHo
 
                 // Navigate to FragmentVideo and pass the bundle as an argument
                 Navigation.findNavController(v).navigate(R.id.action_fragmentTraining_to_fragmentVideo, bundle);
-
-
-
             }
         });
 
@@ -84,8 +76,6 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHo
         holder.textViewMuscles.setText(TextUtils.join(", ", training.getMuscles()));
         holder.textViewRecommendedTimes.setText(training.getRecommendedNumberOfTraining());
         holder.textViewLevel.setText(training.getLevel());
-
-
 
         Glide.with(context)
                 .load(training.getTurl())
@@ -147,9 +137,6 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHo
                         }
                     }
                 }
-
-
-
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
