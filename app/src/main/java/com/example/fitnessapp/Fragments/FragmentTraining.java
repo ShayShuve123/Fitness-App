@@ -35,11 +35,8 @@ public class FragmentTraining extends Fragment {
     private TrainingAdapter adapter;
     private List<Training> trainingList;
     private DatabaseReference userRef;
-
+    
     String userLevel,level;
-
-
-
 
     @Nullable
     @Override
@@ -101,7 +98,6 @@ public class FragmentTraining extends Fragment {
                     }
                 }
 
-
                 adapter.notifyDataSetChanged();
             }
 
@@ -140,6 +136,4 @@ public class FragmentTraining extends Fragment {
             });
         }
     }
-
-
 }
