@@ -4,9 +4,7 @@ public class UserEquipment {
 
     private String equipmentImgUrl; // Changed variable name to match Firebase field
     private String equipmentName;
-
-    private boolean isSelected; // Added field to track selection//for non equipment
-
+    private boolean isSelected; // Added field to track selection, for non equipment
 
     public UserEquipment() {
         // Default constructor required for Firebase
@@ -21,11 +19,9 @@ public class UserEquipment {
         return equipmentImgUrl;
     }
 
-
     public String getEquipmentName() {
         return equipmentName;
     }
-
 
     //for non equipment
     public boolean isSelected() {
