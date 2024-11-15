@@ -21,22 +21,17 @@
         android:theme="@style/Theme.FitnessApp"
         tools:targetApi="31"
         >
-
-
+        
         <!-- Define notification channel -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/channel_name" />
-
-
 
         <!-- Define the service -->
         <service
             android:name=".classes.NotificationService"
             android:enabled="true"
             android:exported="false" />
-
-
 
         <!-- Other application components -->
 
