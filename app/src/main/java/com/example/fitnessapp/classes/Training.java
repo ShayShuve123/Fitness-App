@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Training {
 
     // names like in the firebase
-    private  String description;//not in res view
+    private  String description;
     private  String level;
     private  String minutes;
     private  ArrayList<String> muscles;
@@ -15,11 +15,7 @@ public class Training {
     private  String recommendedNumberOfTraining;
     private  String turl; //imageResource
     private  String tvideo; //Video Resource,not in res view
-
-
-
-
-
+    
     public Training(String description, String level, String minutes, ArrayList<String> muscles, String name, ArrayList<String> necessaryEquipment, String points, String recommendedNumberOfTraining,String turl, String tvideo) {
         this.description = description;
         this.level = level;
@@ -76,8 +72,7 @@ public class Training {
     public String getTvideo() {
         return tvideo;
     }
-
-
+    
     //No setters,we get them all from firebase and there is no need to change
 
 }
