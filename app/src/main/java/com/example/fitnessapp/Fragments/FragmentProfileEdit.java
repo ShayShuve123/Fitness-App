@@ -66,7 +66,6 @@ public class FragmentProfileEdit extends Fragment {
 
         radioGroupExerciseLevel = view.findViewById(R.id.radioGroupExerciseLevel);
 
-
         // Fetch user data from Firebase and populate EditText fields
         fetchUserData();
 
@@ -81,8 +80,6 @@ public class FragmentProfileEdit extends Fragment {
                         Navigation.findNavController(view).navigate(R.id.action_fragmentProfileEdit_to_fragmentHome22);
                     }
                 }, 1000);
-
-
             }
         });
     }
@@ -126,7 +123,6 @@ public class FragmentProfileEdit extends Fragment {
         }
     }
 
-
     @SuppressLint("NonConstantResourceId")
     private void saveProfile() {
         String firstName = editTextFirstName.getText().toString().trim();
@@ -169,7 +165,7 @@ public class FragmentProfileEdit extends Fragment {
 
         if (user != null) {
             DatabaseReference userRef = mDatabase;
-
+            
             userRef.child("firstName").setValue(firstName);
             userRef.child("lastName").setValue(lastName);
             userRef.child("phone").setValue(phone);
