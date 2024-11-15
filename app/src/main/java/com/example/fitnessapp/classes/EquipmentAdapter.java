@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.fitnessapp.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,7 +73,7 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.View
             checkBoxAdd = itemView.findViewById(R.id.checkBoxAdd);
         }
     }
-
+    
     // Method to get the selected equipment list
     public List<UserEquipment> getSelectedEquipmentList() {
         return selectedEquipmentList;
