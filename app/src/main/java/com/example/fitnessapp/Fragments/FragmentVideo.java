@@ -10,12 +10,10 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import com.example.fitnessapp.R;
 
 public class FragmentVideo extends Fragment {
@@ -56,8 +54,7 @@ public class FragmentVideo extends Fragment {
         textViewTimer = view.findViewById(R.id.textViewTimer);
 
         btnStartStopVideo = view.findViewById(R.id.btnStartStopVideo); // Initialize the new button
-
-
+        
         btnReplay.setOnClickListener(v -> replayVideo());
         btnDone.setOnClickListener(v -> goBackToTraining());
         btnStartStop.setOnClickListener(v -> {
@@ -79,11 +76,6 @@ public class FragmentVideo extends Fragment {
                 btnStartStopVideo.setText("Pause Video");
             }
         });
-
-
-
-
-
 
         // Retrieve video URL and description passed as arguments
         Bundle arguments = getArguments();
