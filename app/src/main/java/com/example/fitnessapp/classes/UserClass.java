@@ -11,18 +11,10 @@ public class UserClass {
     private double weight;
     private int age;
     private String gender;
-
     private String exerciseLevel;
-
     private String workoutsPerWeek;//ANAT
-
     ArrayList<UserEquipment>availableEquipment;//all the equipment the user have
-
     private String myPoints;
-
-    //private String calories;
-
-
 
     // Constructors
     public UserClass() {
