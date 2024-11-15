@@ -32,10 +32,7 @@ public class FragmentNotification extends Fragment {
     private TimePicker timePicker;
     private DatePicker datePicker;
     private Button btnScheduleNotification;
-
     private Button btnSkip;
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,9 +75,6 @@ public class FragmentNotification extends Fragment {
 
             }
         });
-
-
-
     }
 
     private void setNotification() {
@@ -142,8 +136,4 @@ public class FragmentNotification extends Fragment {
         intent.putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().getPackageName());
         startActivity(intent);
     }
-
-
-
-
 }
