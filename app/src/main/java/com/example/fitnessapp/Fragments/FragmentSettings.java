@@ -5,10 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import com.example.fitnessapp.R;
 
 public class FragmentSettings extends Fragment {
@@ -28,8 +26,6 @@ public class FragmentSettings extends Fragment {
         Button btnEditEquipment = view.findViewById(R.id.btnEditEquipment);
         Button btnHome9 = view.findViewById(R.id.btnHome9);
 
-
-
         // Set click listener for the button to navigate to FragmentProfileEdit
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,15 +41,12 @@ public class FragmentSettings extends Fragment {
             }
         });
 
-
         btnHome9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_fragmentSettings_to_fragmentHome22);
             }
         });
-
-
 
         return view;
     }
