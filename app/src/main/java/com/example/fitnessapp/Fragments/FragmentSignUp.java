@@ -34,15 +34,10 @@ public class FragmentSignUp extends Fragment {
     private EditText editTextFirstName, editTextLastName, editTextEmail, editTextPassword,
             editTextPhone, editTextHeight, editTextWeight, editTextAge;
     private RadioGroup radioGroupGender,radioGroupExerciseLevel, radioGroupWorkoutsPerWeek;
-
     private Button buttonSignUp;
     private FirebaseAuth mAuth;
-
     int selectedGenderId,selectedExerciseLevel,selectedWorkoutsPerWeek;
-
     private String userId;
-
-
 
     @Nullable
     @Override
@@ -50,7 +45,6 @@ public class FragmentSignUp extends Fragment {
         view = inflater.inflate(R.layout.fragment_sign_up, container, false);
 
         mAuth = FirebaseAuth.getInstance();
-
         editTextFirstName = view.findViewById(R.id.editTextFirstName);
         editTextLastName = view.findViewById(R.id.editTextLastName);
         editTextEmail = view.findViewById(R.id.editTextEmail);
