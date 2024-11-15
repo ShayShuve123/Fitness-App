@@ -1,30 +1,20 @@
 package com.example.fitnessapp.Fragments;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.example.fitnessapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentHome1#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FragmentHome1 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -40,7 +30,6 @@ public class FragmentHome1 extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment FragmentHome1.
      */
-    // TODO: Rename and change types and number of parameters
     public static FragmentHome1 newInstance(String param1, String param2) {
         FragmentHome1 fragment = new FragmentHome1();
         Bundle args = new Bundle();
@@ -72,7 +61,6 @@ public class FragmentHome1 extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.action_fragmentHome12_to_fragmentSignUp);
-
             }
         });
 
@@ -82,7 +70,6 @@ public class FragmentHome1 extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.action_fragmentHome12_to_fragmentLogin);
-
             }
         });
 
